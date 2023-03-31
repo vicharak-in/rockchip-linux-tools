@@ -1,5 +1,11 @@
+v3.15 revision(2023/02/23)
+1.support download jffs image
+
 v3.14 revision(2023/02/02)
 1.add force_data_band to control transfer package size per time
+
+v3.13 revision(2022/11/10)
+1.support to download update.img on the second storage
 
 v3.12 revision(2022/10/28)
 1.rkimageMaker binary update
