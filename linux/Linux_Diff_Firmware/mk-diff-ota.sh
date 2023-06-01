@@ -16,7 +16,7 @@ echo_red()
   echo -e "\033[31m$1\033[0m"
 }
 
-DIR=$(dirname $0)
+DIR=$(cd $(dirname $0); pwd)
 export PATH=$PATH:"$DIR"
 
 check_tool()
@@ -98,6 +98,12 @@ get_chip_from_parameter()
     RK3568)
       echo -n -RK3568
       ;;
+    RK3566)
+      echo -n -RK3568
+      ;;
+    RK3562)
+      echo -n -RK3562
+      ;;
     RK3588)
       echo -n -RK3588
       ;;
@@ -172,7 +178,7 @@ while read LINE; do
 
   if [ ! -f ${OLD_DIR}/${IMG} ]; then
     echo_red "Copy ${IMG}, there's not corresponding old file"
-    ln -s ../../${NEW_DIR}/${IMG} ${DIFF_DIR}/${IMG}
+    ln -s ${NEW_DIR}/${IMG} ${DIFF_DIR}/${IMG}
     continue
   fi
 
@@ -186,17 +192,17 @@ while read LINE; do
 
       if [ $fs_new != $fs_old ]; then
         echo_red "Copy ${IMG}, root fs type are different: $fs_old vs $fs_new"
-        ln -s ../../${NEW_DIR}/${IMG} ${DIFF_DIR}/${IMG}
+        ln -s ${NEW_DIR}/${IMG} ${DIFF_DIR}/${IMG}
       elif [ $fs_new != "Squashfs" ]; then
         echo_red "Copy ${IMG}, $fs_new not supported"
-        ln -s ../../${NEW_DIR}/${IMG} ${DIFF_DIR}/${IMG}
+        ln -s ${NEW_DIR}/${IMG} ${DIFF_DIR}/${IMG}
       else
         diff_img $NAME ${OLD_DIR}/${IMG} ${NEW_DIR}/${IMG} ${DIFF_DIR}/${IMG}
       fi
       ;;
     *)
       echo_red "Copy ${IMG}"
-      ln -s ../../${NEW_DIR}/${IMG} ${DIFF_DIR}/${IMG}
+      ln -s ${NEW_DIR}/${IMG} ${DIFF_DIR}/${IMG}
       ;;
   esac
 done < ${NEW_DIR}/package-file
