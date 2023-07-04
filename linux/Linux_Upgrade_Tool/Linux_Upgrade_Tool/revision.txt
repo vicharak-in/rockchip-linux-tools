@@ -1,5 +1,23 @@
+v2.22 revision(2023/07/03)
+1.add grow_align to specify if align on grow partition
+
+v2.21 revision(2023/04/12)
+1.fix download sparse bug casue of use the default_rw_sectors 
+
+v2.20 revision(2023/03/07)
+1.add jffs image download support
+2.add force_data_band config 
+
+v2.19 revision(2023/01/10)
+1.add sfi command to print loader and firmware info
+2.add exf command to extract firmware or loader
+
+v2.18 revision(2022/11/10)
+1.support to download update.img into the second storage
+
 v2.17 revision(2022/09/19)
 1.fix sparse size larger than 4g bug on computing total size
+2.add stdout buffer config
 
 v2.16 revision(2022/09/19)
 1.fix chunk data size bug on writing sparse
