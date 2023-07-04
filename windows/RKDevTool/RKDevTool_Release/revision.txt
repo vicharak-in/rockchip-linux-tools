@@ -1,3 +1,13 @@
+v3.18 revision(2023/07/03)
+1.fix grow partition ending lba bug
+
+v3.17 revision(2023/05/11)
+1.add convert relative path into absolute path function
+2. fix export config without set partsize bug
+
+v3.16 revision(2023/05/04)
+1.add close_check_idb into config.ini
+
 v3.15 revision(2023/02/23)
 1.support download jffs image
 
