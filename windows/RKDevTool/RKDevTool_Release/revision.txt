@@ -1,3 +1,6 @@
+v3.19 revision(2023/09/11)
+1.get transfer max limit after switch storage
+
 v3.18 revision(2023/07/03)
 1.fix grow partition ending lba bug
 
