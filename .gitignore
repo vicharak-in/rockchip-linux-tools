@@ -22,3 +22,4 @@ windows/RKDevTool/rockdev/package-file
 linux/Linux_Pack_Firmware/rockdev/update.img
 linux/Linux_Upgrade_Tool/Linux_Upgrade_Tool/log
 windows/RKDevTool/RKDevTool_Release/Log
+linux/PinDebug/pin_debug_tool_v1.11_for_linux.tar
